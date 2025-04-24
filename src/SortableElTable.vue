@@ -43,7 +43,7 @@ export default {
           const arr = this.$children[0].data;
           const targetRow = arr.splice(oldIndex, 1)[0];
           arr.splice(newIndex, 0, targetRow);
-          this.$emit("drop", { targetObject: targetRow, list: arr });
+          this.$emit("drop", { targetObject: targetRow, list: arr, oldIndex, newIndex });
         }
       });
     },
